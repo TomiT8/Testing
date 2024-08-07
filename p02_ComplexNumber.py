@@ -71,31 +71,23 @@ class ComplexNumber:
     def add(self, other):
         new_real = (self.real + other.real)
         new_imaginary = (self.imaginary + other.imaginary)
-        if ((isinstance(new_real, int) or isinstance(new_real, float)) and
-                (isinstance(new_imaginary, int) or isinstance(new_imaginary, float))):
-            return ComplexNumber(new_real, new_imaginary)
+        return ComplexNumber(new_real, new_imaginary)
 
     def subtract(self, other):
         new_real = (self.real - other.real)
         new_imaginary = (self.imaginary - other.imaginary)
-        if ((isinstance(new_real, int) or isinstance(new_real, float)) and
-                (isinstance(new_imaginary, int) or isinstance(new_imaginary, float))):
-            return ComplexNumber(new_real, new_imaginary)
+        return ComplexNumber(new_real, new_imaginary)
 
     def multiply(self, other):
         new_real = (self.real * other.real - self.imaginary * other.imaginary)
         new_imaginary = (self.real * other.imaginary + self.imaginary * other.real)
-        if ((isinstance(new_real, int) or isinstance(new_real, float)) and
-                (isinstance(new_imaginary, int) or isinstance(new_imaginary, float))):
-            return ComplexNumber(new_real, new_imaginary)
+        return ComplexNumber(new_real, new_imaginary)
 
     def divide(self, other):
         try:
             new_real = round(((self.real * other.real + self.imaginary * other.imaginary) /(other.real ** 2 + other.imaginary ** 2)),3)
             new_imaginary = round(((self.imaginary * other.real - self.real * other.imaginary) / (other.real ** 2 + other.imaginary ** 2)),3)
-            if ((isinstance(new_real, int) or isinstance(new_real, float)) and
-                    (isinstance(new_imaginary, int) or isinstance(new_imaginary, float))):
-                return ComplexNumber(new_real, new_imaginary)
+            return ComplexNumber(new_real, new_imaginary)
         except:
             return None
 
@@ -107,6 +99,7 @@ class ComplexNumber:
 
 num1 = ComplexNumber(1, 2)
 num2 = ComplexNumber(3, 8)
+#num3 = ComplexNumber('Hell', 'world')
 print(f'Num1 real part is {num1.real} and imaginary part is {num1.imaginary}i.')
 print(num1.add(num2))                   # 4 +10i
 print(num1.subtract(num2))              # -2 -6i
@@ -117,3 +110,4 @@ print(num1 < num2)                      # True
 print(num1 > num2)                      # False
 print(num2.absolute_value())            # 8.544
 print(f'{num2} {num2.conjugate()}.')    # 3 -8i
+#print(num3)
