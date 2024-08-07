@@ -6,6 +6,7 @@ from .p05_test_func import *
 def test_func(number, result):
     assert func(number) == result
 
+
 # todo
 #   doplnené pre precvičenie
 def test_func2():
@@ -16,4 +17,3 @@ def test_func2():
     assert func(92) == 18
     assert func(79) == 14
     assert func(19023) == 206
-    
