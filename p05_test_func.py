@@ -3,4 +3,4 @@ def func(string):
     str_string = int(str_string) *2
     return int(str_string)
 
-print(func(123))
+print(func(12883))  # 183*2 = 366
