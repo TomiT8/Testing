@@ -1,0 +1,22 @@
+testovanie - či mám úplné pokrytie
+
+pip install coverage                                                    - inštalácia coverage
+pip freeze > .\requirements.txt                                         - vytvorenie requirement.txt
+coverage run --source="." --omit="*/venv/*" -m pytest                   - potrebné spustiť analýzu
+
+coverage report .\p01_BasicCalculator_test.py                           - spustenie coverage pre daný súbor
+coverage report *test*                                                  - spustenie coverage pre všetky súbory s textom "test"
+
+- ak by som mal plnú platenú verziu, tak by som vedel vytvoriť
+  coverage skrz tri bodky hore v pycharm "run with coverage"
+  - to by mi ukázalo v *.py, ktorú časť kódu nemám otestovanú
+
+- viem to ale nahradiť pomocou:
+coverage html                                                           - vytvorím súbor html
+
+- keď otvorím index.html a potom prehliadač napr. chrome, tak mi zobrazí peknú tabuľku
+
+- ak chcem otestovať pokrytie testov iba pre jeden konkrétny súbor tak dám:
+coverage run -m pytest p01_BasicCalculator_test.py
+coverage report p01_BasicCalculator_test.py
+coverage html
