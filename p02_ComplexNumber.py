@@ -17,6 +17,7 @@
 
 import math
 
+
 class ComplexNumber:
     def __init__(self, real, imaginary):
         self.real = real
@@ -85,8 +86,10 @@ class ComplexNumber:
 
     def divide(self, other):
         try:
-            new_real = round(((self.real * other.real + self.imaginary * other.imaginary) /(other.real ** 2 + other.imaginary ** 2)),3)
-            new_imaginary = round(((self.imaginary * other.real - self.real * other.imaginary) / (other.real ** 2 + other.imaginary ** 2)),3)
+            new_real = round(((self.real * other.real + self.imaginary * other.imaginary) / (
+                        other.real ** 2 + other.imaginary ** 2)), 3)
+            new_imaginary = round(((self.imaginary * other.real - self.real * other.imaginary) / (
+                        other.real ** 2 + other.imaginary ** 2)), 3)
             return ComplexNumber(new_real, new_imaginary)
         except:
             return None
@@ -94,8 +97,12 @@ class ComplexNumber:
     def conjugate(self):
         new_imaginary = - self.imaginary
         return f'Conjugate is {self.real} {new_imaginary}i'
+
     def absolute_value(self):
-        return round(math.sqrt(self.real ** 2 + self.imaginary ** 2),3)
+        return round(math.sqrt(self.real ** 2 + self.imaginary ** 2), 3)
+
+if __name__ == "__main__":
+    print(BaseException())
 
 num1 = ComplexNumber(1, 2)
 num2 = ComplexNumber(3, 8)
