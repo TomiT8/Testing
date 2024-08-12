@@ -1,5 +1,5 @@
-# todo
-#   ideálny stav, ak je vždy za slovom biely znak
+# todo:
+#   ideálny stav, ak je vždy za slovom medzera
 # def word_count(word):
 #     if len(word) == 0:
 #         return 0
@@ -9,16 +9,23 @@
 #
 # print(word_count(""))
 
-# todo
-#   skrz regex
+# todo:
+#    regex
 
-import re
+# import re
+#
+#
+# def word_count(word):
+#     word = word.strip()
+#     if len(word) == 0:
+#         return 0
+#     words = re.findall(r'\b\w+\b', word)
+#
+#     return len(words)
 
 
-def word_count(word):
-    word = word.strip()
-    if len(word) == 0:
-        return 0
-    words = re.findall(r'\b\w+\b', word)
+# todo:
+#   tretie riešenie
 
-    return len(words)
+def word_count(s):
+    return len(s.split())
