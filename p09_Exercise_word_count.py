@@ -9,6 +9,9 @@
 #
 # print(word_count(""))
 
+# todo
+#   skrz regex
+
 import re
 
 
